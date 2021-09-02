@@ -22,8 +22,8 @@ import org.springframework.context.annotation.FilterType;
 )
 public class AutoAppConfig {
     //수동등록 빈이 우선권을 가지므로 @Component로 등록한 MemoryMemberRepository는 무시당함
-    @Bean(name="memoryMemberRepository")
-    MemberRepository memberRepository(){
-        return new MemoryMemberRepository();
-    }
+//    @Bean(name="memoryMemberRepository")
+//    MemberRepository memberRepository(){
+//        return new MemoryMemberRepository();
+//    }
 }
