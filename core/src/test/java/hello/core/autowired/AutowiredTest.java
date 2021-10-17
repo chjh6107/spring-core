@@ -5,6 +5,7 @@ import java.util.Optional;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationContext;
+import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.lang.Nullable;
 
@@ -14,7 +15,7 @@ public class AutowiredTest {
     @Test
     void AutowiredOption(){
         ApplicationContext ac = new AnnotationConfigApplicationContext(TestBean.class);
-
+        ((ConfigurableApplicationContext)ac).close();
     }
     static class TestBean{
         @Autowired(required = false) //자동 주입할 대상이 없으면 수정자 메서드 자체가 호출 안됨

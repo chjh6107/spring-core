@@ -1,9 +1,9 @@
 package hello.core.order;
 
 import hello.core.annotation.MainDiscountPolicy;
-import lombok.RequiredArgsConstructor;
+// import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Qualifier;
+// import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 
 import hello.core.discount.DiscountPolicy;
@@ -17,8 +17,8 @@ public class OrderServiceImpl implements OrderService{
     private final MemberRepository memberRepository;
     private final DiscountPolicy discountPolicy;
 
-    @Autowired
-    private DiscountPolicy rateDiscountPolicy;
+    // @Autowired
+    // private DiscountPolicy rateDiscountPolicy;
 
     //생성자 의존관계
     //생성자가 한개면 Autowired 생략 가능

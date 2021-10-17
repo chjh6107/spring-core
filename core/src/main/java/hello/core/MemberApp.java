@@ -1,6 +1,7 @@
 package hello.core;
 
 import org.springframework.context.ApplicationContext;
+import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 import hello.core.member.Grade;
@@ -25,5 +26,6 @@ public class MemberApp {
 
         System.out.println("member = " + member.getName());
         System.out.println("findMember = " + findMember.getName());
+        ((ConfigurableApplicationContext)applicationContext).close();
     }
 }

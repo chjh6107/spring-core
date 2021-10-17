@@ -9,6 +9,7 @@ import hello.core.member.MemberServiceImpl;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.springframework.context.ApplicationContext;
+import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 public class SingletonTest {
@@ -58,5 +59,6 @@ public class SingletonTest {
 
         //memberService1 != memberService2
         assertThat(memberService1).isSameAs(memberService2);
+        ((ConfigurableApplicationContext)ac).close();
     }
 }
